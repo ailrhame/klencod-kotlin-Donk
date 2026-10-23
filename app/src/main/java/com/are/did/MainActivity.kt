@@ -278,8 +278,8 @@ class AutoSwipeService : AccessibilityService() {
         serviceInfo = AccessibilityServiceInfo().apply {
             eventTypes = AccessibilityEvent.TYPES_ALL_MASK
             feedbackType = AccessibilityServiceInfo.FEEDBACK_GENERIC
-            flags = AccessibilityServiceInfo.FLAG_DEFAULT
-            canPerformGestures = true
+            flags = AccessibilityServiceInfo.DEFAULT
+            setCapabilities(AccessibilityServiceInfo.CAPABILITY_CAN_PERFORM_GESTURES)
             notificationTimeout = 50
         }
         running = true
